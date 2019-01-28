@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-1-24 14:42:53 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ustc.zgq.entity.FlightReservation"  table="FLIGHTRESERV" lazy="false">
+        <id name="resvKey" type="java.lang.String">
+            <column name="RESVKEY" />
+        </id>
+        <property name="resvKey" type="java.lang.String" insert="false" update="false">
+            <column name="RESVKEY" />
+        </property>
+        <property name="flightNum" type="java.lang.String">
+            <column name="FLIGHTNUM" />
+        </property>
+        <property name="price" type="double">
+            <column name="PRICE" />
+        </property>
+        <property name="custId" type="java.lang.String" >
+            <column name="CUSTID" />
+        </property>
+        <property name="ordDate" type="java.lang.String">
+            <column name="ORDDATE" />
+        </property>
+        <property name="custName" type="java.lang.String">
+            <column name="CUSTNAME" />
+        </property>
+        <property name="fromCity" type="java.lang.String">
+            <column name="FROMCITY" />
+        </property>
+        <property name="arivCity" type="java.lang.String">
+            <column name="ARIVCITY" />
+        </property>
+        <property name="seatId" type="java.lang.String">
+            <column name="SEATID" />
+        </property>
+         <property name="seatType" type="java.lang.String">
+            <column name="SEATTYPE" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

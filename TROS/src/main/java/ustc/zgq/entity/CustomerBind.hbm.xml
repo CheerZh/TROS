@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-1-24 15:48:04 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ustc.zgq.entity.CustomerBind" table="C_A_BINDING">
+        <id name="custId" type="java.lang.String">
+            <column name="CUSTID" />
+            <generator class="assigned" />
+        </id>
+        <property name="custName" type="java.lang.String">
+            <column name="CUSTNAME" />
+        </property>
+        <property name="userId" type="java.lang.String">
+            <column name="USERID" />
+        </property>
+    </class>
+</hibernate-mapping>

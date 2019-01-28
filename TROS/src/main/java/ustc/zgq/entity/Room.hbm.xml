@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-1-24 14:42:53 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ustc.zgq.entity.Room" table="ROOMS">
+        <id name="roomId" type="java.lang.String">
+            <column name="ROOMID" />
+            <generator class="assigned" />
+        </id>
+        <property name="hotlName" type="java.lang.String">
+            <column name="HOTLNAME" />
+        </property>
+        <property name="roomType" type="java.lang.String">
+            <column name="ROOMTYPE" />
+        </property>
+        <property name="date" type="java.lang.String">
+            <column name="DATE" />
+        </property>
+        <property name="isOrded" type="int">
+            <column name="ISORD" />
+        </property>
+    </class>
+</hibernate-mapping>

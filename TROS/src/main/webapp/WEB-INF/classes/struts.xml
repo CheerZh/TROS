@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+ 
+<struts>
+<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+<constant name="struts.devMode" value="true"></constant>
+	<package name="MyPackage" namespace="/" extends="struts-default">
+		<global-allowed-methods>regex:.*</global-allowed-methods>	
+		<action name="index">
+		    <result>/index.jsp</result>
+		</action>
+		
+		
+		<!-- 登录相关 -->
+		<action name="login" class="ustc.zgq.action.LoginAction" >
+		    <result name="success" type="redirect">pages/index.jsp</result>
+			<result name="register" type="redirect">pages/register.jsp</result>
+			<result name="error" type="redirect">pages/error.html</result>
+		</action>
+		<action name="register" class="ustc.zgq.action.RegisterAction" >
+		    <result name="success" type="redirect">pages/index.jsp</result>
+			<result name="error" type="redirect">>pages/error.html</result>
+		</action>
+		<action name="logout" class="ustc.zgq.action.Logout" >
+		    <result name="success" type="redirect">pages/index.jsp</result>
+		</action>
+		
+		<!-- 旅客信息相关 -->
+		<action name="syn_cust" class="ustc.zgq.action.SearchCusts" >
+		    <result name="success" type="redirect">pages/cust_info_m.jsp</result>
+		</action>
+		
+		
+		<!-- 航班查询相关 -->
+		<action name="searchflt" class="ustc.zgq.action.SearchFlight" >
+		    <result name="success" type="redirect">pages/flight_info.jsp</result>
+		</action>
+		<!-- 管理页及信息同步 -->
+		<action name="syn_flt" class="ustc.zgq.action.SearchFlight" >
+		    <result name="success" type="redirect">pages/flight_info_m.jsp</result>
+		</action>
+		<action name="getSeats" class="ustc.zgq.action.SearchFlight" method="getSeats">
+		    <result name="success" type="redirect">pages/seats.jsp</result>
+		</action>
+		
+		<action name="getSeatInfo" class="ustc.zgq.action.SearchFlight" method="getSeatInfo">
+		    <result name="success" type="redirect">pages/flt_detail.jsp</result>
+		</action>
+		
+		
+		
+		<!-- 车辆查询相关 -->
+		<action name="searchcars" class="ustc.zgq.action.SearchCar" >
+		    <result name="success" type="redirect">pages/car_info.jsp</result>
+		</action>
+		<!-- 同步 -->
+		<action name="syn_cars" class="ustc.zgq.action.SearchCar" >
+		    <result name="success" type="redirect">pages/car_info_m.jsp</result>
+		</action>	
+		<action name="searchcar" class="ustc.zgq.action.SearchCar" method="SearchCar">
+		    <result name="success" type="redirect">pages/car_info.jsp</result>
+		</action>
+		
+		
+		
+		<!-- 酒店查询相关 -->
+		<action name="searchhotel" class="ustc.zgq.action.SearchHotel" >
+		    <result name="success" type="redirect">pages/hotel_info.jsp</result>
+		</action>
+		<!-- 管理页及信息同步 -->
+		<action name="syn_htl" class="ustc.zgq.action.SearchHotel" >
+		    <result name="success" type="redirect">pages/hotel_info_m.jsp</result>
+		</action>
+		<action name="searchroom" class="ustc.zgq.action.SearchHotel" method="SearchRoom">
+		    <result name="success" type="redirect">pages/hotel_info.jsp</result>
+		</action>
+		
+		
+		<!-- 订单相关 -->
+		<action name="orderSeat" class="ustc.zgq.action.HandleResv" method="orderSeat">
+		    <result name="input" type="redirect">pages/customers.jsp</result>
+		</action>
+		<action name="chooseCust" class="ustc.zgq.action.HandleResv" method="chooseCust">
+		    <result name="input" type="redirect">pages/customers.jsp</result>
+		</action>
+		<action name="formFltOrd" class="ustc.zgq.action.HandleResv" method="formFltOrd">
+		    <result name="success" type="redirect">pages/fltReservation.jsp</result>
+		</action>
+		<action name="get_flt_ords" class="ustc.zgq.action.HandleResv" method="getFltOrds">
+		    <result name="success" type="redirect">pages/fltOrds.jsp</result>
+		</action>	
+				
+						
+	</package>
+</struts>

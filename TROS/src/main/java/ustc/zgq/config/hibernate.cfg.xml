@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory >
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:XE</property>
+		<property name="hibernate.connection.username">zgq</property>
+		<property name="hibernate.connection.password">123456</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.default_catalog"></property>
+		<property name="hibernate.default_schema"></property>
+        <mapping resource ="ustc/zgq/entity/Car.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/CarReservation.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/Customer.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/CustomerBind.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/Flight.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/FlightReservation.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/Hotel.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/HotelReservation.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/Reservation.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/Room.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/RoomInfo.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/Seat.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/SeatInfo.hbm.xml"/>
+        <mapping resource ="ustc/zgq/entity/User.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

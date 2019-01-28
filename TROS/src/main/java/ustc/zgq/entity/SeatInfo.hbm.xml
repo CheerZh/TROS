@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-1-24 14:42:53 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ustc.zgq.entity.SeatInfo" table="SEATINFO">
+        <id name="flightNum" type="java.lang.String">
+            <column name="FLIGHTNUM" />
+            <generator class="assigned" />
+        </id>
+        <property name="seatType" type="java.lang.String">
+            <column name="SEATTYPE" />
+        </property>
+        <property name="numSeats" type="int">
+            <column name="NUMSEATS" />
+        </property>
+        <property name="numAvail" type="int">
+            <column name="NUMAVAIL" />
+        </property>
+        <property name="price" type="double">
+            <column name="PRICE" />
+        </property>
+    </class>
+</hibernate-mapping>
