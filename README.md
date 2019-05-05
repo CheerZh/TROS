@@ -1,2 +1,3 @@
-# TROS
-ustc高级数据库实验 旅行订票系统
+# TROS-旅行订票系统
+ustc高级数据库课程设计 
+stutus2+hebinate+bootstap+oracle
